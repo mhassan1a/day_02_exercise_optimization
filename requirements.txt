@@ -1,2 +1,4 @@
 nox
 numpy
+matplotlib
+jax
