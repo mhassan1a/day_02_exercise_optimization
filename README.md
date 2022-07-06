@@ -33,8 +33,8 @@ Once more the problem is illustrated below:
 
 - Finally, to explore the automatic differentiation functionality we consider the problem,
 $$ \min_{\mathbf{x}} \mathbf{x} \cdot \mathbf{x} + \cos(2 \pi x_0 ) + \sin(2 \pi x_1)  + 0.5 \cdot \text{relu}(x_0) + 10 \cdot \tanh( \|\mathbf{x} \| ),  \text{   with   } \mathbf{x_0} = (2.9, -2.9) .$$
-The function is already defined in  `src/optimize_2d_momentum_bumpy_jax.py`
-use `jax.grad` to compute the gradient automatically. Use the result to find the minimum using momentum.  
+The function is already defined in  `src/optimize_2d_momentum_bumpy_jax.py`. We dont have to find the gradient by hand!
+Use `jax.grad` [(jax-documentation)](https://jax.readthedocs.io/en/latest/_autosummary/jax.grad.html) to compute the gradient automatically. Use the result to find the minimum using momentum.  
 
 While coding use `nox -s test`, `nox -s lint`, and `nox -s typing` to check your code.
 Autoformatting help is available via `nox -s format`.
