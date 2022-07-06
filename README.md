@@ -5,7 +5,7 @@ mathematical language
 $$ \min_{x}f(x) .$$
 All modules in `src` require your attention. 
 - To get started, take a look at `src/optimize_1d.py`.
-Using gradient find the minumum of the parabola starting from point (5, 25), or in other words
+Use the gradient to find the minumum of the parabola starting from five, or in other words
 $$ \min_{x} x^2,  \text{   with   } x_0 = 5 $$
 The problem is illustrated below:
 ![parabola_task](./figures/parabola_task.png)
