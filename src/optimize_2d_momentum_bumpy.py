@@ -60,8 +60,8 @@ if __name__ == "__main__":
 
     start_pos = np.array((2.9, -2.9))
     step_size = 0.01
-    alpha = 0.8  # Try: 0.0, 0.7 , 0.8
-    step_total = 100
+    alpha = 0.0  # TODO: Choose your step size.
+    step_total = 1  # TODO: Choose the total number of steps.
 
     pos_list = [start_pos]
     grad = np.array((0.0, 0.0))
