@@ -38,4 +38,4 @@ use `jax.grad` to compute the gradient automatically. Use the result to find the
 
 While coding use `nox -s test`, `nox -s lint`, and `nox -s typing` to check your code.
 Autoformatting help is available via `nox -s format`.
-Feel free to read mode about `nox` at https://nox.thea.codes/en/stable/ .
+Feel free to read mode about nox at https://nox.thea.codes/en/stable/ .
