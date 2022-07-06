@@ -22,7 +22,7 @@ Once more the problem is illustrated below:
 
 
 - Additionally we consider a bumpy paraboloid, $\cdot$ denots the scalar product,
-$$ \min_{\mathbf{x}} \mathbf{x} \cdot \mathbf{x} + \cos(2  \pi x_0) + \sin(2 \pi x_1 ), \text{   with   } \mathbf{x_0} = (2.9, -2.9) $$
+$$ \min_{\mathbf{x}} \mathbf{x} \cdot \mathbf{x} + \cos(2  \pi x_0) + \sin(2 \pi x_1 ), \text{   with   } \mathbf{x_0} = (2.9, -2.9) .$$
 The addtional sin and cosine terms will require momentum for convergence.
 The bumpy paraboloid is already implemented in `src/optimize_2d_momentum_bumpy.py`. 
 Your task is to solve this problem using two-dimensional gradient descent with momentum.
