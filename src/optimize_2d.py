@@ -26,7 +26,7 @@ def grad_paraboloid(pos: np.ndarray) -> np.ndarray:
     Returns:
         np.ndarray: The gradient at position pos.
     """
-    ## TODO: implement me!
+    # TODO: implement me!
     return np.zeros_like(pos)
 
 
