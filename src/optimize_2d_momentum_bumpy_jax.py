@@ -52,8 +52,8 @@ if __name__ == "__main__":
     plt.colorbar()
 
     start_pos = np.array((2.9, -2.9))
-    step_size = 0.005
-    alpha = 0.9
+    step_size = 0.0  # TODO: Choose your step size.
+    alpha = 0.0      # TODO: Choose your momentum term.
     step_total = 100
 
     pos_list = [start_pos]
