@@ -17,7 +17,7 @@ def derivative_parabola(x: float) -> float:
 if __name__ == "__main__":
     start_pos = 5.0
     step_size = 0.0  # TODO: choose a step size
-    step_total = 1   # TODO: chosse a reasonable total number of steps.
+    step_total = 1  # TODO: chosse a reasonable total number of steps.
 
     pos_list = [start_pos]
     # TODO: Implement gradient descent.

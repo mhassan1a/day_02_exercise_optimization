@@ -44,8 +44,8 @@ if __name__ == "__main__":
     plt.colorbar()
 
     start_pos = np.array((2.9, -2.9))
-    step_size = 0.0   # TODO: choose your step size.
-    step_total = 1    # TODO: choose your step total.
+    step_size = 0.0  # TODO: choose your step size.
+    step_total = 1  # TODO: choose your step total.
 
     pos_list = [start_pos]
     for _ in range(step_total):
