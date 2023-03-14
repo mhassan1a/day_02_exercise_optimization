@@ -25,8 +25,19 @@ def write_movie(
         name (str, optional): The name of the movie file. Defaults to "grad_movie".
         xlim (int, optional): Largest x value in the data. Defaults to 3.
         ylim (int, optional): Largest y value in the data. Defaults to 3.
+    
+    Raises:
+        RuntimeError: If conda ffmpeg package is not installed.
     """
-    ffmpeg_writer = manimation.writers["ffmpeg"]
+    try:
+        ffmpeg_writer = manimation.writers["ffmpeg"]
+    except RuntimeError:
+        raise RuntimeError(
+            "RuntimeError: If you are using anaconda or miniconda there might "
+            "be a missing package named ffmpeg. Try installing it with "
+            "'conda install -c conda-forge ffmpeg' in your terminal."
+        )
+
     metadata = dict(
         title="Gradient descent", artist="Matplotlib", comment="Minimization movie!"
     )

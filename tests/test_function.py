@@ -69,7 +69,7 @@ def test_grad_parabola(pos):
         np.array((2.9, 2.9)),
     ),
 )
-def test_gard_paraboloid(pos):
+def test_grad_paraboloid(pos):
     """Test the paraboloid gradient."""
     nabla_x = grad_paraboloid(pos)
     fd_nabla_x = finite_difference(paraboloid, pos)
