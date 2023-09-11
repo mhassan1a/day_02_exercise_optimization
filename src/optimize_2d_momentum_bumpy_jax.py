@@ -57,7 +57,7 @@ if __name__ == "__main__":
     step_total = 100
 
     pos_list = [start_pos]
-    grad = np.array((0.0, 0.0))
+    velocity_vec = np.array((0.0, 0.0))
     # TODO: Implement gradient descent with momentum.
 
     for pos in pos_list:
