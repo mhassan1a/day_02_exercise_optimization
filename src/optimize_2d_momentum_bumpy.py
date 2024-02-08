@@ -35,7 +35,11 @@ def bumpy_grad(pos: np.ndarray) -> np.ndarray:
         np.ndarray: The gradient at position [x, y]
     """
     # TODO: Implement me!
-    return np.zeros_like(pos)
+    dz_dx = 2 * pos[0] - 2 * np.pi * np.sin(2 * np.pi * pos[0])
+    dz_dy = 2 * pos[1] + 2 * np.pi * np.cos(2 * np.pi * pos[1])
+
+    return np.array([dz_dx, dz_dy])
+
 
 
 if __name__ == "__main__":
@@ -59,16 +63,22 @@ if __name__ == "__main__":
     plt.colorbar()
 
     start_pos = np.array((2.9, -2.9))
-    step_size = 0.0  # TODO: Choose your step size.
-    alpha = 0.0  # TODO: Choose your momentum term.
-    step_total = 1  # TODO: Choose the total number of steps.
+    step_size = 0.1  # TODO: Choose your step size.
+    alpha = 0.1  # TODO: Choose your momentum term.
+    step_total = 1000 # TODO: Choose the total number of steps.
 
     pos_list = [start_pos]
     velocity_vec = np.array((0.0, 0.0))
     # TODO implement gradient descent with momentum.
+    for step in range(step_total):
+        grad = bumpy_grad(pos_list[-1])
+        velocity_vec = alpha * velocity_vec - step_size * grad
+        pos_list.append(pos_list[-1] + velocity_vec)
 
     for pos in pos_list:
         plt.plot(pos[0], pos[1], ".r")
+    else:
+        plt.plot(pos_list[-1][0], pos_list[-1][1], "og")
     plt.show()
 
     write_movie(mx, my, mz, pos_list, "writer_grad_bumpy_plot")

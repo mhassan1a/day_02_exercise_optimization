@@ -11,16 +11,18 @@ def parabola(x: float) -> float:
 def derivative_parabola(x: float) -> float:
     """Compute the derivate of the parabola."""
     # TODO: Implement the correct gradient.
-    return 0.0
+    return 2*x
 
 
 if __name__ == "__main__":
     start_pos = 5.0
-    step_size = 0.0  # TODO: choose a step size
-    step_total = 1  # TODO: chosse a reasonable total number of steps.
+    step_size = 0.1  # TODO: choose a step size
+    step_total = 200  # TODO: chosse a reasonable total number of steps.
 
     pos_list = [start_pos]
     # TODO: Implement gradient descent.
+    for step in range(step_total):
+        pos_list.append(pos_list[-1] - step_size * derivative_parabola(pos_list[-1]))
 
     x = np.linspace(-5, 5, 100)
     plt.title("Minimize f(x) on parabola")
